@@ -33,15 +33,17 @@ function App() {
   //     environment: 'development12'
   //   })
   // );
-  // useEffect(() => {
-  //   setRollbar(
-  //     new Rollbar({
-  //       accessToken: process.env.REACT_APP_ACCESS_TOKEN,
-  //       captureUncaught: true,
-  //       captureUnhandledRejections: true
-  //     })
-  //   );
-  // }, []);
+  useEffect(() => {
+    //   setRollbar(
+    //     new Rollbar({
+    //       accessToken: process.env.REACT_APP_ACCESS_TOKEN,
+    //       captureUncaught: true,
+    //       captureUnhandledRejections: true
+    //     })
+    //   );
+    console.log(process.env.REACT_APP_GIT_SHA);
+    console.log(process.env.REACT_APP_ENVIROMENT);
+  }, []);
   // useRollbar(rollbar);
   return (
     <Provider config={_rollbarConfig}>

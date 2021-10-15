@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-r": "react-scripts build",
-    "build": "set REACT_APP_GIT_SHA=`git rev-parse HEAD` react-scripts build && npm run upload-source-maps",
+    "rollbar-build": "SET +REACT_APP_GIT_SHA && npm run build",
+    "build": "SET REACT_APP_ENVIROMENT=PRODUCTION && react-scripts build && npm run upload-source-maps",
     "upload-source-maps": "rm sourceMaps/* && mv build/static/js/*.map sourceMaps/ && sh ./upload-script.sh"
   },
   "eslintConfig": {

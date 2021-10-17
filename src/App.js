@@ -18,7 +18,7 @@ const _rollbarConfig = {
   errorOnContentSecurityPolicy: true,
   context: 'home#index',
   server: {
-    root: 'https://github.com/dolphen05/using-Rollbar-with-React'
+    root: 'https://github.com/dolphen05/using-Rollbar-with-React/build'
   },
   payload: {
     environment: process.env.REACT_APP_ENVIROMENT,
@@ -81,8 +81,8 @@ function App() {
                   );
                 } catch (e) {
                   // rollbar.error('data provider   error', e);
-                  Rollbar.error(e);
-                  console.log('🚀 ~ file: App.js ~ line 63 ~ App ~ Error', e);
+                  Rollbar.error('message', e);
+                  // console.log('🚀 ~ file: App.js ~ line 63 ~ App ~ Error', e);
                 }
               }}
             >

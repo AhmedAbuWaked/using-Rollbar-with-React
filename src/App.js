@@ -16,10 +16,9 @@ const _rollbarConfig = {
   autoInstrument: true,
   contentSecurityPolicy: true,
   errorOnContentSecurityPolicy: true,
+  context: 'home#index',
   server: {
-    host: 'localhost',
-    root: 'C:\\Users\\Ahmed\\Desktop\\testing\\',
-    branch: 'master'
+    root: 'https://github.com/dolphen05/using-Rollbar-with-React'
   },
   payload: {
     environment: process.env.REACT_APP_ENVIROMENT,

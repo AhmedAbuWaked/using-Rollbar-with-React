@@ -17,6 +17,11 @@ const _rollbarConfig = {
         code_version: process.env.REACT_APP_GIT_SHA,
         guess_uncaught_frames: true
       }
+    },
+    person: {
+      id: Math.random().toString(), // required
+      username: 'Ahmed',
+      email: 'test@example.com'
     }
   }
 };

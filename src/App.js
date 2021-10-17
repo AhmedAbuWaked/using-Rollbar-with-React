@@ -18,6 +18,10 @@ const _rollbarConfig = {
         guess_uncaught_frames: true
       }
     },
+    server: {
+      root: 'http://localhost/',
+      branch: 'gh-pages'
+    },
     person: {
       id: Math.random().toString(), // required
       username: 'Ahmed',

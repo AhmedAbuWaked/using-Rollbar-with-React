@@ -22,9 +22,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-r": "react-scripts build",
-    "rollbar-build": "SET +REACT_APP_GIT_SHA && npm run build",
     "build": "SET REACT_APP_ENVIROMENT=PRODUCTION && react-scripts build && npm run upload-source-maps",
-    "upload-source-maps": "rm sourceMaps/* && mv build/static/js/*.map sourceMaps/ && sh ./upload-script.sh"
+    "upload-source-maps": "rm sourceMaps/* && mv build/static/js/*.map sourceMaps/ && sh ./upload-script.sh",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
